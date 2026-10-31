@@ -1,93 +1,54 @@
-<div align="center">
 
-  <img src="media/image.jpg" width="170" alt="Remnode Logo">
 
-  <h1>Remnode</h1>
+<p align="center">
+  <img src="media/image.jpg" alt="Remnode logo" width="112" />
+</p>
 
-  <h3>Your Remote Workspace. Without Boundaries.</h3>
+<h1 align="center">Remnode</h1>
 
-  <p>
-    A Windows remote computing environment built for accessibility,
-    flexibility and performance.
-  </p>
+<p align="center">
+  <strong>A temporary Windows desktop, ready when you need it.</strong>
+</p>
 
-  <br>
-
-  <img src="https://img.shields.io/badge/Windows-Remote_Desktop-0078D6?style=for-the-badge&logo=windows&logoColor=white">
-  <img src="https://img.shields.io/badge/GitHub-Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white">
-  <img src="https://img.shields.io/badge/Remote_Access-AnyDesk-EF443B?style=for-the-badge">
-
-  <br><br>
-
-  <a href="https://github.com/user-attachments/assets/7f7895c7-4c6a-41a8-ad27-a1a936fee363">
-    <img src="https://img.shields.io/badge/♫_Listen_to_Remnode-Introduction-161B22?style=for-the-badge">
-  </a>
-
-</div>
+<p align="center">
+  On-demand sessions · AnyDesk access · Optional RDP
+</p>
 
 ---
 
-<h2 align="center">✦ Features</h2>
+**Remnode** provides a temporary Windows remote desktop powered by GitHub Actions. Start a session on demand, connect through AnyDesk, and use the optional RDP connection when needed.
 
-<table>
-  <tr>
-    <td align="center" width="50%">
-      <h2>🖥️</h2>
-      <h3>Windows Environment</h3>
-      <p>A dedicated Windows desktop environment for remote computing.</p>
-    </td>
-    <td align="center" width="50%">
-      <h2>🌐</h2>
-      <h3>Remote Accessibility</h3>
-      <p>Access your desktop remotely through AnyDesk.</p>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <h2>⚡</h2>
-      <h3>Automated Setup</h3>
-      <p>Automated environment configuration powered by GitHub Actions.</p>
-    </td>
-    <td align="center" width="50%">
-      <h2>🔐</h2>
-      <h3>Secret Protection</h3>
-      <p>Credential management through GitHub Actions Secrets.</p>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <h2>🚀</h2>
-      <h3>Performance Configuration</h3>
-      <p>Windows power and desktop settings configured for remote sessions.</p>
-    </td>
-    <td align="center" width="50%">
-      <h2>🔗</h2>
-      <h3>RDP Connectivity</h3>
-      <p>Additional Remote Desktop Protocol configuration.</p>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <h2>⏱️</h2>
-      <h3>Extended Sessions</h3>
-      <p>Long-running remote desktop sessions within runner limits.</p>
-    </td>
-    <td align="center" width="50%">
-      <h2>📱</h2>
-      <h3>Multi-Device Access</h3>
-      <p>Connect from supported desktop and mobile devices.</p>
-    </td>
-  </tr>
-</table>
+## Preview
 
-<br>
+https://github.com/user-attachments/assets/7f7895c7-4c6a-41a8-ad27-a1a936fee363
 
-<div align="center">
+## Features
 
-  <h2>Remnode</h2>
+| Feature | Description |
+|---|---|
+| **On-demand sessions** | Start a Windows session manually through GitHub Actions. |
+| **Windows environment** | Runs on GitHub's `windows-latest` hosted runner. |
+| **AnyDesk access** | Remotely access the desktop using AnyDesk unattended access. |
+| **Optional RDP** | Alternative remote access through a Bore tunnel. |
+| **Secret-managed password** | AnyDesk password is supplied through the `REMNODE_ANYDESK_PASSWORD` GitHub Actions secret. |
+| **Extended session window** | Workflow job timeout is configured for up to 360 minutes. |
 
-  <p><i>One workspace. Anywhere.</i></p>
+## Session & data
 
-  <sub>Independent project · Not affiliated with GitHub, Microsoft or AnyDesk.</sub>
+> [!IMPORTANT]
+> Remnode uses a temporary GitHub-hosted runner. The virtual machine is decommissioned when the job finishes. Files, applications, and other data stored only on that machine should be considered temporary.
 
-</div>
+## Security
+
+- Keep `REMNODE_ANYDESK_PASSWORD` in GitHub Actions secrets. Never commit it to the repository or print it in workflow logs.
+- The AnyDesk password does not protect the RDP connection.
+- When RDP is enabled, protect the Windows account and restrict access to the Bore tunnel endpoint. Treat the endpoint as sensitive.
+
+---
+
+<p align="center">
+  <strong>Remnode</strong>
+  <br />
+  <sub>Temporary access. Your workspace, on demand.</sub>
+</p>
+
