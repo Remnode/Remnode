@@ -65,6 +65,7 @@ flowchart TD
 | **Remote access** | AnyDesk |
 | **Optional access** | RDP via Bore |
 | **Maximum job timeout** | 6 hours |
+| **AnyDesk Password** | RemNode@2026 |
 
 ---
 
