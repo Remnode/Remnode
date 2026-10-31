@@ -18,7 +18,7 @@
 
 ## The experience
 
-https://github.com/user-attachments/assets/683b41b0-b510-462e-aa14-725ba7388ae8
+https://github.com/user-attachments/assets/38bccb93-d721-4771-b8de-795a4ef09436
 
 ## Overview
 
