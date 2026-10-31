@@ -1,54 +1,109 @@
 
 
 <p align="center">
-  <img src="media/image.jpg" alt="Remnode logo" width="112" />
+  <img src="media/image.jpg" alt="Remnode" width="118" />
 </p>
 
-<h1 align="center">Remnode</h1>
+<h1 align="center">REMNODE</h1>
 
 <p align="center">
-  <strong>A temporary Windows desktop, ready when you need it.</strong>
+  <strong>Your Windows desktop. On demand.</strong>
 </p>
 
 <p align="center">
-  On-demand sessions · AnyDesk access · Optional RDP
+  A temporary remote Windows environment powered by GitHub Actions.
+</p>
+
+<p align="center">
+  <strong>SPIN UP · CONNECT · GET THINGS DONE</strong>
 </p>
 
 ---
 
-**Remnode** provides a temporary Windows remote desktop powered by GitHub Actions. Start a session on demand, connect through AnyDesk, and use the optional RDP connection when needed.
-
-## Preview
+## Live preview
 
 https://github.com/user-attachments/assets/7f7895c7-4c6a-41a8-ad27-a1a936fee363
 
+---
+
+## Built for remote access
+
+| Capability | Details |
+|:--|:--|
+| **Windows environment** | GitHub-hosted `windows-latest` runner |
+| **On-demand launch** | Manually triggered workflow |
+| **Primary connection** | AnyDesk remote desktop |
+| **Alternative connection** | Optional RDP through a Bore tunnel |
+| **Unattended access** | AnyDesk password supplied through a GitHub Actions secret |
+| **Session duration** | Configured job timeout of up to 360 minutes |
+
+## Connection map
+
+```mermaid
+flowchart LR
+    A["GitHub Actions"] --> B["Windows runner"]
+    B --> C["AnyDesk"]
+    B -. "Optional connection" .-> D["Bore tunnel"]
+    D --> E["RDP"]
+```
+
 ## Features
 
-| Feature | Description |
-|---|---|
-| **On-demand sessions** | Start a Windows session manually through GitHub Actions. |
-| **Windows environment** | Runs on GitHub's `windows-latest` hosted runner. |
-| **AnyDesk access** | Remotely access the desktop using AnyDesk unattended access. |
-| **Optional RDP** | Alternative remote access through a Bore tunnel. |
-| **Secret-managed password** | AnyDesk password is supplied through the `REMNODE_ANYDESK_PASSWORD` GitHub Actions secret. |
-| **Extended session window** | Workflow job timeout is configured for up to 360 minutes. |
+<table>
+  <tr>
+    <td width="50%">
+      <h3>01 · Windows desktop</h3>
+      A Windows environment running on a GitHub-hosted runner.
+    </td>
+    <td width="50%">
+      <h3>02 · AnyDesk access</h3>
+      Connect to the desktop remotely using AnyDesk.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>03 · Optional RDP</h3>
+      An alternative Remote Desktop connection through Bore.
+    </td>
+    <td width="50%">
+      <h3>04 · On-demand sessions</h3>
+      Start a session manually whenever you need one.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>05 · Secret integration</h3>
+      Uses `REMNODE_ANYDESK_PASSWORD` from GitHub Actions secrets.
+    </td>
+    <td width="50%">
+      <h3>06 · Extended runtime</h3>
+      A configured job timeout of up to six hours.
+    </td>
+  </tr>
+</table>
 
-## Session & data
+## Technical overview
 
-> [!IMPORTANT]
-> Remnode uses a temporary GitHub-hosted runner. The virtual machine is decommissioned when the job finishes. Files, applications, and other data stored only on that machine should be considered temporary.
+| Property | Value |
+|:--|:--|
+| Project | Remnode |
+| Platform | Windows |
+| Runner | `windows-latest` |
+| Workflow trigger | `workflow_dispatch` |
+| Remote desktop | AnyDesk |
+| Optional protocol | RDP |
+| Tunnel | Bore |
+| Job timeout | 360 minutes |
 
-## Security
+## Important
 
-- Keep `REMNODE_ANYDESK_PASSWORD` in GitHub Actions secrets. Never commit it to the repository or print it in workflow logs.
-- The AnyDesk password does not protect the RDP connection.
-- When RDP is enabled, protect the Windows account and restrict access to the Bore tunnel endpoint. Treat the endpoint as sensitive.
+Remnode uses a temporary hosted runner. When its GitHub Actions job ends, the runner is decommissioned. Data stored only on that runner should be treated as temporary.
 
 ---
 
 <p align="center">
-  <strong>Remnode</strong>
+  <strong>REMNODE</strong>
   <br />
-  <sub>Temporary access. Your workspace, on demand.</sub>
+  <sub>A remote desktop, ready when you need it.</sub>
 </p>
 
