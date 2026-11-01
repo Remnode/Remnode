@@ -64,7 +64,7 @@ jobs:
           Copy-Item $boreExe "C:\bore.exe" -Force
 
       # ── STEP 1: Show Session Info ──────────────────────
-      - name: 1. Show Session Info
+      - name: 1. Session Info
         shell: pwsh
         env:
           RUN_NUMBER: ${{ github.run_number }}
