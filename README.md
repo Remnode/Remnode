@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img src="media/image.jpg" width="200" alt="Remnode logo" />
+  <img src="media/image.jpg" width="150" alt="Remnode logo" />
 </p>
 
 <h1 align="center">REMNODE</h1>
